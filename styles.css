@@ -1,0 +1,223 @@
+:root {
+    /* Colores */
+    --color-nivel-básico: #3498db;
+    --color-nivel-intermedio: #2ecc71;
+    --color-nivel-avanzado: #e74c3c;
+    --color-fondo: #434343;
+    --color-fuentes: #f0f0f0;
+    --color-fuentes-hover: #555555;
+    
+    /* Tamaños fuentes */
+    --tamano-fuente-base: 16px;
+    --espaciado: 1rem;
+    
+    /* Propiedades de caja */
+    --sombra-caja: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --sombra-caja-hover: 0 6px 16px rgba(0, 0, 0, 0.2);
+    --borde: 3px;
+    --radio-borde: 15px;
+    --borde-color: #ccc;
+    
+    /* Fuentes */
+    --fuente-principal: 'Helvetica', 'Arial', sans-serif;
+    --fuente-titulos: 'Georgia', serif;
+    
+    /* Tamaños Imágenes */
+    --ancho-imagenes: 200px;
+    --alto-imagenes: 200px;
+    
+    /* Espaciados */
+    --espaciado-externo: 2rem;
+    --espaciado-interno: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-fuentes);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: var(--espaciado-externo);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--color-fuentes);
+}
+
+.encabezado {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.encabezado1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: calc(var(--espaciado) * 2);
+    padding: var(--espaciado);
+    background: linear-gradient(135deg, var(--color-nivel-básico), #2980b9);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+}
+
+.encabezado1 h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.encabezado2 {
+    display: flex;
+    flex-direction: column;
+    border: var(--borde) solid var(--borde-color);
+    border-radius: var(--radio-borde);
+    padding: var(--espaciado-interno);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.primeraParte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaciado);
+    margin-bottom: var(--espaciado);
+}
+
+.presentacion, .imagen {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentacion {
+    padding: var(--espaciado);
+}
+
+.presentacion h2 {
+    color: var(--color-nivel-básico);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.presentacion p {
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--color-fuentes);
+    border-left: 3px solid var(--color-nivel-intermedio);
+    padding-left: 0.8rem;
+}
+
+.imagen {
+    align-items: center;
+}
+
+.imagenPersonal {
+    width: 100%;
+    max-width: var(--ancho-imagenes);
+    height: var(--alto-imagenes);
+    object-fit:cover;
+    border-radius: 10%;
+    border: var(--borde) solid var(--color-nivel-básico);
+    box-shadow: var(--sombra-caja);
+    transition: all 0.3s ease;
+}
+
+.imagenPersonal:hover {
+    transform: scale(1.03);
+    box-shadow: var(--sombra-caja-hover);
+}
+
+.segundaParte {
+    margin-top: var(--espaciado);
+}
+
+.redesSociales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.botonRedSocial {
+    background: none;
+    border: var(--borde) solid var(--borde-color);
+    border-radius: var(--radio-borde);
+    color: var(--color-fuentes);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.botonRedSocial:hover {
+    background-color: var(--color-nivel-básico);
+    color: white;
+    border-color: var(--color-nivel-básico);
+    transform: translateY(-3px);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    :root {
+        --espaciado: 0.8rem;
+        --espaciado-externo: 1rem;
+        --espaciado-interno: 1rem;
+    }
+    
+    .encabezado1 h1 {
+        font-size: 2rem;
+    }
+    
+    .primeraParte {
+        flex-direction: column;
+    }
+    
+    .presentacion, .imagen {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .presentacion p {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid var(--color-nivel-intermedio);
+        padding-top: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado1 h1 {
+        font-size: 1.6rem;
+    }
+    
+    .presentacion h2 {
+        font-size: 1.5rem;
+    }
+    
+    .redesSociales {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .botonRedSocial {
+        width: 100%;
+        text-align: center;
+    }
+}
