@@ -397,3 +397,179 @@ h1, h2, h3, h4 {
         padding: 1rem;
     }
 }
+
+/* Estilos para la sección Habilidades y Herramientas */
+.habilidadesHerramientas {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 var(--espaciado);
+}
+
+.habilidadesPrimeraParte {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.habilidadesPrimeraParte h3 {
+    font-size: 2rem;
+    color: var(--color-nivel-básico);
+    border-bottom: 2px solid var(--color-nivel-intermedio);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Estilos para cada sección de habilidades */
+.habilidadesSegundaParte,
+.habilidadesTerceraParte,
+.habilidadesCuartaParte,
+.habilidadesQuintaParte {
+    margin-bottom: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--borde-color);
+    box-shadow: var(--sombra-caja);
+}
+
+.ofimatica h4,
+.DesarrolloWeb h4,
+.basesDeDatosTitulo h4,
+.herramientasExtraTitulo h4 {
+    text-align: center;
+    color: var(--color-nivel-intermedio);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Contenedores flex para las tarjetas */
+.contenedorOfimatica,
+.desarrollo,
+.basesDeDatos,
+.herramientasExtra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Estilos para todas las tarjetas (ofimaticaApp, lenguajes, nombreBD, extra) */
+.ofimaticaApp,
+.lenguajes,
+.nombreBD,
+.extra {
+    flex: 0 0 calc(33.333% - 1.5rem); /* 3 por fila con gap */
+    min-width: 150px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--borde-color);
+}
+
+.ofimaticaApp:hover,
+.lenguajes:hover,
+.nombreBD:hover,
+.extra:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ofimaticaApp h4,
+.lenguaje,
+.nombreApp {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-fuentes);
+    font-size: 1.1rem;
+}
+
+.ofimaticaApp img,
+.lenguajes img,
+.nombreBD img,
+.extra img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0.5rem 0;
+}
+
+.nivel {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Colores para los niveles */
+.nivel[data-nivel="avanzado"] {
+    background-color: var(--color-nivel-avanzado);
+    color: white;
+}
+
+.nivel[data-nivel="intermedio"] {
+    background-color: var(--color-nivel-intermedio);
+    color: white;
+}
+
+.nivel[data-nivel="básico"] {
+    background-color: var(--color-nivel-básico);
+    color: white;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .ofimaticaApp,
+    .lenguajes,
+    .nombreBD,
+    .extra {
+        flex: 0 0 calc(50% - 1rem); /* 2 por fila en tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .ofimaticaApp,
+    .lenguajes,
+    .nombreBD,
+    .extra {
+        flex: 0 0 calc(33.333% - 1rem); /* 3 por fila en móviles como solicitaste */
+    }
+    
+    .ofimaticaApp img,
+    .lenguajes img,
+    .nombreBD img,
+    .extra img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .ofimaticaApp h4,
+    .lenguaje,
+    .nombreApp {
+        font-size: 0.9rem;
+    }
+    
+    .nivel {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ofimaticaApp,
+    .lenguajes,
+    .nombreBD,
+    .extra {
+        flex: 0 0 calc(50% - 0.8rem); /* 2 por fila en móviles muy pequeños */
+    }
+    
+    .habilidadesSegundaParte,
+    .habilidadesTerceraParte,
+    .habilidadesCuartaParte,
+    .habilidadesQuintaParte {
+        padding: 1rem;
+    }
+}
