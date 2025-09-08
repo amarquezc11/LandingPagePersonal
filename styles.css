@@ -573,3 +573,104 @@ h1, h2, h3, h4 {
         padding: 1rem;
     }
 }
+
+.contactos {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 var(--espaciado);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radio-borde);
+    padding: 2.5rem 1.5rem;
+    border: 1px solid var(--borde-color);
+    box-shadow: var(--sombra-caja);
+}
+
+.contactosPrimeraParte {
+    margin-bottom: 1.5rem;
+}
+
+.contactosPrimeraParte p {
+    font-size: 1.5rem;
+    color: var(--color-fuentes);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.contactosSegundaParte {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contactosSegundaParte .botonRedSocial {
+    background: none;
+    border: var(--borde) solid var(--borde-color);
+    border-radius: var(--radio-borde);
+    color: var(--color-fuentes);
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 140px;
+    text-align: center;
+}
+
+.contactosSegundaParte .botonRedSocial:hover {
+    background-color: var(--color-nivel-básico);
+    color: white;
+    border-color: var(--color-nivel-básico);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para cada botón */
+.contactosSegundaParte .botonRedSocial:nth-child(1):hover {
+    background-color: #E1306C; /* Color de Instagram */
+    border-color: #E1306C;
+}
+
+.contactosSegundaParte .botonRedSocial:nth-child(2):hover {
+    background-color: #EA4335; /* Color de Gmail */
+    border-color: #EA4335;
+}
+
+.contactosSegundaParte .botonRedSocial:nth-child(3):hover {
+    background-color: #25D366; /* Color de WhatsApp */
+    border-color: #25D366;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .contactos {
+        padding: 2rem 1rem;
+    }
+    
+    .contactosPrimeraParte p {
+        font-size: 1.3rem;
+    }
+    
+    .contactosSegundaParte {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contactosSegundaParte .botonRedSocial {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactosPrimeraParte p {
+        font-size: 1.1rem;
+    }
+    
+    .contactos {
+        margin: 2rem auto;
+        padding: 1.5rem 1rem;
+    }
+}
