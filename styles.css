@@ -221,3 +221,179 @@ h1, h2, h3, h4 {
         text-align: center;
     }
 }
+
+.acercaDe {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 var(--espaciado);
+}
+
+.acercaDePrimeraParte {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.acercaDePrimeraParte h3 {
+    font-size: 2rem;
+    color: var(--color-nivel-básico);
+    border-bottom: 2px solid var(--color-nivel-intermedio);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.acercaDeSegundaParte {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilos para aptitudes (habilidades blandas y duras) */
+.aptitudes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.habilidadesBlandas, .habilidadesDuras {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--borde-color);
+    box-shadow: var(--sombra-caja);
+}
+
+.habilidadesBlandas h4, .habilidadesDuras h4 {
+    color: var(--color-nivel-intermedio);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.habilidadesBlandas ul, .habilidadesDuras ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.habilidadesBlandas li, .habilidadesDuras li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.habilidadesBlandas li:before, .habilidadesDuras li:before {
+    content: "•";
+    color: var(--color-nivel-básico);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilos para pasiones (cartas) */
+.pasiones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.deporte, .social, .academico {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    border: 1px solid var(--borde-color);
+    box-shadow: var(--sombra-caja);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.deporte:hover, .social:hover, .academico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.deporte h4, .social h4, .academico h4 {
+    color: var(--color-nivel-avanzado);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.descPasiones {
+    margin-bottom: 1rem;
+    color: var(--color-fuentes);
+}
+
+.deporte img, .social img, .academico img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Estilos para enfoque profesional */
+.enfoqueProfesional {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--borde-color);
+    box-shadow: var(--sombra-caja);
+    max-width: 1050px; /* Mismo ancho que las 3 cartas juntas con sus gaps */
+    margin: 0 auto;
+}
+
+.enfoqueProfesional h4 {
+    color: var(--color-nivel-básico);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.enfoqueProfesional p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .aptitudes {
+        flex-direction: column;
+    }
+    
+    .habilidadesBlandas, .habilidadesDuras {
+        min-width: 100%;
+    }
+    
+    .pasiones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .deporte, .social, .academico {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .acercaDe {
+        padding: 0 1rem;
+    }
+    
+    .acercaDePrimeraParte h3 {
+        font-size: 1.5rem;
+    }
+    
+    .habilidadesBlandas, .habilidadesDuras, 
+    .deporte, .social, .academico,
+    .enfoqueProfesional {
+        padding: 1rem;
+    }
+}
