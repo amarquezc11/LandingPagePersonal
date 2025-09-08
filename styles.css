@@ -345,7 +345,7 @@ h1, h2, h3, h4 {
     border-radius: var(--radio-borde);
     border: 1px solid var(--borde-color);
     box-shadow: var(--sombra-caja);
-    max-width: 1050px; /* Mismo ancho que las 3 cartas juntas con sus gaps */
+    max-width: 1050px;
     margin: 0 auto;
 }
 
@@ -457,7 +457,7 @@ h1, h2, h3, h4 {
 .lenguajes,
 .nombreBD,
 .extra {
-    flex: 0 0 calc(33.333% - 1.5rem); /* 3 por fila con gap */
+    flex: 0 0 calc(33.333% - 1.5rem); /* 3 por fila */
     min-width: 150px;
     background-color: rgba(255, 255, 255, 0.08);
     border-radius: var(--radio-borde);
@@ -536,7 +536,7 @@ h1, h2, h3, h4 {
     .lenguajes,
     .nombreBD,
     .extra {
-        flex: 0 0 calc(33.333% - 1rem); /* 3 por fila en móviles como solicitaste */
+        flex: 0 0 calc(33.333% - 1rem); /* 3 por fila en móviles*/
     }
     
     .ofimaticaApp img,
